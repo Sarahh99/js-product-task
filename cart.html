@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js-product-task</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="style.css" />
+
+
+        <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css">
+        
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="cart-add.js">
+
+
+
+
+        
+
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+
+        <div class="topnav">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+            <a href="#">FAQs</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">EN 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">AR</a>
+                  <a href="#">FR</a>
+                  <a href="#">RU</a>
+                </div>
+                </div>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">USD 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">AED</a>
+                      <a href="#">EUR</a>
+                      <a href="#">CAD</a>
+                    </div>
+                </div>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">Account 
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                        <a href="#">Sign In</a>
+                        <a href="#">Sign Up</a>
+                        </div>
+                  </div>
+    
+        
+    
+        </div>
+        <div class="topnav">
+          <div style="padding-left:16px">
+            
+            <div class="toptext">
+            
+            <h1 style="text-align: center;">LADY'S LAND</h1>
+        </div>
+        <div class="searchbar">
+                <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+    
+            <div class="toptext">
+            <div class="phonenumber">
+            <p>
+                Customer Service <br>
+                <b>+012 345 6789</b>
+            </p>
+        </div>
+    </div>
+        </div>
+    
+          </div>
+    
+          <div class="topnav">
+            <div class="categories">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i> Categories 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Dresses</a>
+                  <a href="#">Jeans</a>
+                  <a href="#">Shirts</a>
+                  <a href="#">Jackets</a>
+                  <a href="#">SleepWear</a>
+                  <a href="#">SportWear</a>
+                  <a href="#">SwimWear</a>
+                  <a href="#">Accessories</a>
+                  <a href="#">Shoes</a>
+                </div>
+                </div></div>
+    
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Shop Detail</a>
+    
+            <div class="pages">
+            <div class="dropdown">
+                <button class="dropbtn">pages  
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Shopping Cart</a>
+                  <a href="#">wishlist</a>
+                  <a href="#">CheckOut</a>
+                </div>
+                </div></div>
+    
+            <a href="#">Contact</a>
+    
+            <div class="cart">
+                
+            <a href="#"><i class="fa fa-heart " aria-hidden="true">  <button class="button">0</button></i></a>
+            <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true">  <button class="button">0</button></i></a>
+          </div></div>
+        
+
+        <div class="container">
+            
+        <div class="header">
+
+            <div class>
+                <nav>
+                  <a href="#">Home</a> /
+                  <a href="#">Shop</a> /
+                  <span>Shopping Cart</span>
+                </nav>
+              </div>
+
+        </div>
+
+        <div class="products">
+
+                <table id="table1">
+            <thead>
+              <tr>
+                <th>
+                  <input
+                    type="text"
+                    id="product-name"
+                    placeholder="Product Name"
+                  />
+                </th>
+                <th><input type="text" id="price" placeholder="Price" /></th>
+                <th>
+                  <input type="text" id="quantity" placeholder="Quantity" /></th>
+                <th colspan="2"><button class="button"id="submit">Add</button></th>
+              </tr>
+
+            </tr>
+            <tr>
+              <th>Products</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody class="align-middle" id="products">
+          </tbody>
+        </table>
+
+
+
+
+        
+        <script type="text/javascript">
+            
+            document.getElementById("submit").onclick=function()
+            {
+                document.getElementById("table1").style.display="block";
+                
+                var table = document.getElementById("table1");
+                var row = table.insertRow(-1);
+                var product = row.insertCell(0);
+                var price = row.insertCell(1);
+                var quan = row.insertCell(2);
+                var t= row.insertCell(3);
+                product.innerHTML = document.getElementById("product-name").value;
+                price.innerHTML = document.getElementById("price").value;
+                quan.innerHTML = document.getElementById("quantity").value;
+                t.innerHTML= document.getElementById("quantity").value*document.getElementById("price").value;
+                
+                
+            }
+          
+            
+          </script>
+
+              </thead></table>
+
+                      <tbody >
+            
+                      </tbody>
+                
+                  
+              
+
+              
+
+
+
+        </div>
+
+        <div class="checkout">
+
+
+            <form>
+                <div class="form-group"> <label>Have coupon?</label>
+                    <div class="input-group form"> 
+                        <input type="text" class="form-control coupon" name="" placeholder="Coupon code"> 
+                        <span class="input-group-append"> 
+                            <button class="btn btn-primary btn-apply coupon button">Apply Coupon</button> </span> </div>
+                </div>
+            </form>
+
+            <h2>Cart Summary</h2>
+
+            <table id="table3">
+
+                <tr>
+                    <th>Subtotal</th>
+                    <th><div class="price">USD</div></th>
+                </tr>
+                <tr>
+                    <th>Shipping</th>
+                    <th><div class="price">USD</div></th>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <th><div class="price">USD</div></th>
+                </tr>
+            </table>
+                <button class="button" style="width: 100%; ;">
+                  Proceed To Checkout
+                </button>
+              </div>
+
+            <div class="end">
+
+
+
+            </div>
+
+
+        </div>
+        
+
+    </body>
+</html>
