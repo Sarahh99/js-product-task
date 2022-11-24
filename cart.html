@@ -165,9 +165,9 @@
                     placeholder="Product Name"
                   />
                 </th>
-                <th><input type="text" id="price" placeholder="Price" /></th>
+                <th><input type="number" min="0" oninput="validity.valid||(value='');" id="price" placeholder="Price" /></th>
                 <th>
-                  <input type="text" id="quantity" placeholder="Quantity" /></th>
+                  <input type="number" min="0"oninput="validity.valid||(value='');" id="quantity" placeholder="Quantity" /></th>
                 <th colspan="2"><button class="button"id="submit">Add</button></th>
               </tr>
 
